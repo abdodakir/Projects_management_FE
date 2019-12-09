@@ -11,15 +11,16 @@
 }
 
 .footer{
-  background-color: rgb(70, 60, 60);
+  background-color: rgb(17, 16, 16);
   margin:0px auto;
   padding: 20px 0px 20px 0px;
+  color: #fafdff;
 }
 
 address{
   font-size:80%;
   margin:0px;
-  color:#0f0f0f;
+  color:#fafdff;
 }
 
 .navbar-dark {

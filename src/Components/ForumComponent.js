@@ -1,21 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function Home(props) {
+function Forum(props) {
     return (
-        <HomeDiv className="container">
+        <ForumDiv className="container">
             <div className="row justify-content-center" >
-                <h1>Welcome to Projects management.</h1>
+                <></>
+                <h1>Soon ...</h1>
             </div>
-        </HomeDiv>
+        </ForumDiv>
     );
 }
 
-const HomeDiv = styled.div`
+const ForumDiv = styled.div`
     height: 30rem;
     h1 {
         margin-top: 12rem;
     }
 `;
-
-export default Home
+export default Forum
