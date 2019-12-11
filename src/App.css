@@ -3,24 +3,17 @@
   padding:0px auto;
 }
 
+body {
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+  background: #f9f9f9;
+}
+
 .row-content {
   margin:0px auto;
   padding: 50px 0px 50px 0px;
   border-bottom: 1px ridge;
   min-height:400px;
-}
-
-.footer{
-  background-color: rgb(17, 16, 16);
-  margin:0px auto;
-  padding: 20px 0px 20px 0px;
-  color: #fafdff;
-}
-
-address{
-  font-size:80%;
-  margin:0px;
-  color:#fafdff;
 }
 
 .navbar-dark {
@@ -51,4 +44,92 @@ address{
 
 .navmarge {
   margin: 0px 3px;
+}
+
+/*---------------------------------------
+    TYPOGRAPHY              
+-----------------------------------------*/
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 300;
+  line-height: normal;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  color: #353535;
+  font-size: 2em;
+}
+
+p {
+  color: #757575;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+}
+
+/*---------------------------------------
+    GENERAL               
+-----------------------------------------*/
+
+html{
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #202020;
+  text-decoration: none !important;
+}
+
+a,
+input, button,
+.form-control {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+a:hover, a:active, a:focus {
+  color: #29ca8e;
+  outline: none;
+}
+
+::-webkit-scrollbar{
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background: #202020;
+}
+
+.section-title {
+  padding-bottom: 40px;
+}
+
+section {
+  position: relative;
+  padding: 100px 0;
+}
+
+#contact,
+footer {
+  background: #ffffff;
+  text-align: center;
+}
+
+.footer{
+  background-color: rgb(17, 16, 16);
+  margin:0px auto;
+  padding: 20px 0px 20px 0px;
+  color: #fafdff;
+}
+
+address{
+  font-size:80%;
+  margin:0px;
+  color:#fafdff;
 }
