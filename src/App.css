@@ -80,7 +80,7 @@ html{
 }
 
 a {
-  color: #202020;
+  color: #ffffff;
   text-decoration: none !important;
 }
 
@@ -92,7 +92,7 @@ input, button,
 }
 
 a:hover, a:active, a:focus {
-  color: #29ca8e;
+  color: #dc3545;
   outline: none;
 }
 

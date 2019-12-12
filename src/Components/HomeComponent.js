@@ -78,7 +78,7 @@ const HomeSection = styled.section`
                 padding-left: 15px;
             }
             button {
-                background: #29ca8e;
+                background: #dc3545;
                 border: 0;
                 color: #ffffff;
                 right: 6em;
