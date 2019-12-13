@@ -1,23 +1,49 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
+import SingUp from './ModalSingup';
 
-function Home(props) {
-    return (
-        <HomeSection data-stellar-background-ratio="0.5">
-            <div className="overlay"></div>
-            <div className="container">
-                <div className="row">
-                        <div className="offset col-md-6 col-sm-12">
-                            <div className="home-info">
-                                <h1>We help you manage your Projects successfully!</h1>
-                                <button className="button-control">Get started</button>
+class Home extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            isNavOpen: false,
+            isModalSingupOpen: false
+        };
+    };
+
+    singupModal = () => {
+        this.setState({
+            isModalSingupOpen: !this.state.isModalSingupOpen
+        })
+    }
+
+    render(){
+        const { isModalSingupOpen } = this.state;
+        console.log(isModalSingupOpen)
+        return (
+            <>
+                <HomeSection data-stellar-background-ratio="0.5">
+                    <div className="overlay"></div>
+                    <div className="container">
+                        <div className="row">
+                            <div className="offset col-md-6 col-sm-12">
+                                <div className="home-info">
+                                    <h1>We help you manage your Projects successfully!</h1>
+                                    <button className="button-control" onClick={() => this.singupModal()} >Get started</button>
+                                </div>
                             </div>
                         </div>
-
-                </div>
-            </div>
-        </HomeSection>
-    );
+                    </div>
+                </HomeSection>
+                {isModalSingupOpen &&
+                    <SingUp
+                        isModalSingupOpen={isModalSingupOpen}
+                        singupModal={()=>this.singupModal()}
+                    />
+                }
+            </>
+        );
+    }
 }
 
 const HomeSection = styled.section`

@@ -10,8 +10,7 @@ class Header extends Component {
         super(props);
         this.state = {
             isNavOpen: false,
-            isModalSinginOpen: false,
-            isModalSinupOpen: false
+            isModalSinginOpen: false
         };
     }
 
@@ -19,19 +18,13 @@ class Header extends Component {
         this.setState({
             isNavOpen: !this.state.isNavOpen
         });
-    }
+    };
 
     singinModal = () => {
         this.setState({
             isModalSinginOpen: !this.state.isModalSinginOpen
         })
-    }
-
-    singupModal = () => {
-        this.setState({
-            isModalSinupOpen: !this.state.isModalSingupOpen
-        })
-    }
+    };
 
     render() {
         const { isModalSinginOpen } = this.state;
