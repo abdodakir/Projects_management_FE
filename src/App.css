@@ -133,3 +133,50 @@ address{
   margin:0px;
   color:#fafdff;
 }
+
+/*---------------------------------------
+    MODAL               
+-----------------------------------------*/
+
+.modal-content {
+    border-radius: 20px;
+}
+
+.modal-header .close {
+  position: absolute;
+  cursor: pointer;
+  margin: 0;
+  padding:0;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  box-shadow: 0 10px 20px 0
+  #dc3545;
+  background-image: linear-gradient(225deg,
+  #f80019,
+  #ff061f);
+  color:
+  #fff;
+  font-size: 30px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.modal-header h5 {
+  color: #dc3545;
+  font-weight: 500;
+}
+
+.text-danger {
+  font-size: 10px;
+}
+
+.modal-footer {
+  padding: 1rem 0 0 0;
+}
+.modal-footer .btn {
+  border-radius: 20px;
+  width: 20%;
+}

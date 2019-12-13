@@ -9,8 +9,7 @@ function Home(props) {
                 <div className="row">
                         <div className="offset col-md-6 col-sm-12">
                             <div className="home-info">
-                                <h3>professional landing page</h3>
-                                <h1>We help you manage your website successfully!</h1>
+                                <h1>We help you manage your Projects successfully!</h1>
                                 <button className="button-control">Get started</button>
                             </div>
                         </div>

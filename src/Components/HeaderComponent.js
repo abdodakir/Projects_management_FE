@@ -1,9 +1,9 @@
 import React, { Component} from 'react';
-import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem,Button,
-     Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem,Button } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import $ from 'jquery';
+import SingIn from './ModalSingIn';
 
 class Header extends Component {
     constructor(props){
@@ -11,10 +11,8 @@ class Header extends Component {
         this.state = {
             isNavOpen: false,
             isModalSinginOpen: false,
-            direction:'',
-            lastScrollPos:0
+            isModalSinupOpen: false
         };
-        this.handleScroll = this.handleScroll.bind(this);
     }
 
     toggleNav = () => {
@@ -35,59 +33,8 @@ class Header extends Component {
         })
     }
 
-    handleLogin = (event) => {
-        this.toggleModal();
-        //alert("username: "+this.username.value+" password: "+ this.password.value+" Remember: "+this.remember.checked);
-        //event.preventDefault();
-    }
-
-    handleScroll(event) {
-        if(this.state.lastScrollPos > event.currentTarget.scrollTop) {
-          this.setState({
-            direction:'top',
-            lastScrollPos:event.currentTarget.scrollTop
-          });
-        } else if(this.state.lastScrollPos < event.currentTarget.scrollTop) {
-          this.setState({
-            direction:'bottom',
-            lastScrollPos:event.currentTarget.scrollTop
-          });
-        }
-        console.log(this.state.direction)
-      }
-
-    handleColor = () =>{
-        console.log("qdfqgdffgqsdgqs")
-        $(window).scroll(function() {
-            if ($(".navbar").offset().top > 50) {
-                $(".navbar-fixed-top").addClass("top-nav-collapse");
-            } else {
-                $(".navbar-fixed-top").removeClass("top-nav-collapse");
-            }
-        });
-    }
-/* <Modal isOpen={this.state.isModalSinginOpen} toggle={this.singinModal}>
-                    <ModalHeader toggle={this.singinModal}>Login</ModalHeader>
-                    <ModalBody>
-                        <Form onSubmit={this.handleLogin}>
-                            <FormGroup>
-                                <Label htmlFor="username">Username</Label>
-                                <Input type="text" id="username" name="username" innerRef={(input) => this.username = input}></Input>
-                            </FormGroup>
-                            <FormGroup>
-                                <Label htmlFor="password">Password</Label>
-                                <Input type="password" id="password" name="password" innerRef={(input) => this.password = input}></Input>
-                            </FormGroup>
-                            <FormGroup check>
-                                <Label check><Input type="checkbox" name="remember" innerRef={(input) => this.remember = input}/>Remember me</Label>
-                            </FormGroup>
-                            <Button outline type="submit" value="submit" color="dark">Login</Button>
-                        </Form>
-                    </ModalBody>
-                </Modal> */
-
-
     render() {
+        const { isModalSinginOpen } = this.state;
         return(
             <>
             <SectionNav className="navbar-fixed-top">
@@ -126,6 +73,12 @@ class Header extends Component {
                 </Navbar>
                 </div>
             </SectionNav>
+            {isModalSinginOpen &&
+                <SingIn 
+                    isModalSinginOpen={isModalSinginOpen}
+                    singinModal={() => this.singinModal()}
+                />
+            }
             </>
         );
     }
